@@ -1,0 +1,55 @@
+@use 'variables';
+body {
+    font-family: 'Poppins', sans-serif;
+    background: variables.$main;
+    color: variables.$primary-color;
+    @include variables.font();
+}
+
+p{
+    color: variables.$secondary-color;
+}
+
+h1{
+    @include variables.font(54px,59px)
+}
+
+h2{
+    @include variables.font(40px,42px)
+}
+
+h3{
+    @include variables.font(28px,32px)
+}
+
+h4{
+    @include variables.font(14px,20px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.link{
+    font-size: 15px;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none; /*убирает точки с li*/
+    li{
+    margin-top: 10px;
+}
+}
+
+main{
+    padding-top: 90px;
+}
+
+section{
+    min-height: 500px;
+    background: pink;
+}   /*пока что*/
+
+button, input [type="submit"]{
+    cursor: pointer;
+}
