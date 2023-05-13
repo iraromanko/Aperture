@@ -176,7 +176,6 @@ button:hover {
   background-size: cover; /*чтобы не сжималось*/
   background-position: center center;
   text-align: center;
-  max-width: 1440px;
 }
 .section-1-text {
   padding: 0 0 14px;
@@ -189,6 +188,11 @@ button:hover {
   justify-content: center;
   align-items: flex-end;
   height: calc(100vh - 157px);
+}
+@media (max-width: 479px) {
+  .section-1-text-wrapper {
+    align-items: center;
+  }
 }
 .section-1 p {
   padding: 18px;
@@ -223,7 +227,6 @@ button:hover {
   background-repeat: no-repeat; /*чтобы не повторялось*/
   background-size: cover; /*чтобы не сжималось*/
   background-position: center center;
-  max-width: 1440px;
 }
 .section-2-content-wrapper {
   display: flex;
@@ -253,9 +256,9 @@ button:hover {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 270px;
   padding-bottom: 36px;
   border-bottom: 2px solid #FFFFFF;
+  gap: 20px;
 }
 .footer-top-right {
   display: flex;
@@ -266,6 +269,25 @@ button:hover {
 }
 .footer-top h4 {
   color: #C0C0C0;
+}
+@media (max-width: 767px) {
+  .footer {
+    padding: 40px 0;
+  }
+  .footer-top {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-top-left {
+    text-align: center;
+  }
+}
+@media (max-width: 479px) {
+  .footer-top-right {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .footer-middle {
@@ -281,6 +303,16 @@ button:hover {
 }
 .footer-middle-right {
   flex-basis: 340px;
+}
+@media (max-width: 767px) {
+  .footer-middle {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+  .footer-middle-right {
+    flex-basis: unset;
+  }
 }
 
 .mail-input {
