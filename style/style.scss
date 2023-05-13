@@ -105,7 +105,6 @@ button:hover {
   background-size: cover; /*чтобы не сжималось*/
   background-position: center center ;
   text-align: center;
-  max-width: 1440px;
 
   &-text{
     padding: 0 0 14px;
@@ -117,6 +116,9 @@ button:hover {
         justify-content: center;
         align-items: flex-end;
         height: calc(100vh - 157px);
+        @media (max-width: 479px) {
+          align-items: center;
+        }
       }
     }
     p{
@@ -151,7 +153,6 @@ button:hover {
   background-repeat: no-repeat; /*чтобы не повторялось*/
   background-size: cover; /*чтобы не сжималось*/
   background-position: center center;
-  max-width: 1440px;
   &-content-wrapper{
     display: flex;
     justify-content: flex-end;
@@ -179,6 +180,7 @@ button:hover {
 
 .footer{
   padding: 100px 0;
+
   &-top{
     display: flex;
     flex-direction: row;
@@ -186,6 +188,8 @@ button:hover {
     justify-content: space-between;
     padding-bottom: 36px;
     border-bottom: 2px solid variables.$primary-color;
+    gap: 20px;
+
     &-right{
       display: flex;
       flex-direction: row;
@@ -197,6 +201,27 @@ button:hover {
       color: variables.$secondary-color;
     }
   }
+
+  @media (max-width: 767px) {
+    padding: 40px 0;
+
+    &-top {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &-left {
+        text-align: center;
+      }
+    }
+  }
+  @media (max-width: 479px) {
+    &-top-right{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
 }
 
 .footer-middle{
@@ -206,6 +231,7 @@ button:hover {
   justify-content: space-between;
   padding: 40px 0;
   border-bottom: 2px solid variables.$primary-color;
+
   &-left{
     h4{
       padding: 0 0 20px;
@@ -213,6 +239,14 @@ button:hover {
   }
   &-right{
     flex-basis: 340px;
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+    &-right{
+      flex-basis: unset;
+    }
   }
 }
 
