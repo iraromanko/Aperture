@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/animate.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Aperture</title>
 </head>
 <body class="loading">
@@ -36,7 +37,7 @@
                 <div class="header-content">
                     <div class="header-logo-wrapper">
                         <div class="logo">
-                            <img src="./images/logo.png" alt="logo" class="logo">
+                            <img src="./images/logo.svg" alt="logo" class="logo">
                         </div>
                     </div>
                     <div class="header-nav-wrapper">
@@ -87,7 +88,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="section-1-icon-wrapper animate__animated animate__backInRight">
+                    <div class="section-1-icon-wrapper"  data-aos="fade-up">
                         <ul class="icon-list-flex">
                             <li class="icon-list-item">
                                 <div class="icon-list-item-wrapper">
@@ -130,7 +131,7 @@
             <section class="section-2" id="featured">
                 <div class="container">
                     <div class="section-2-content-wrapper">
-                        <div class="wow section-2-text-wrapper animate__animated animate__backInLeft">
+                        <div data-aos="fade-right">
                             <div class="section-2-text">
                                 <h4>
                                     Sunset at Mount Fuji
@@ -140,7 +141,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="section-1-icon-wrapper animate__animated animate__backInRight">
+                        <div class="section-1-icon-wrapper" data-aos="fade-up">
                             <ul class="icon-list-flex">
                                 <li class="icon-list-item">
                                     <div class="icon-list-item-wrapper">
@@ -186,7 +187,7 @@
             <div class="container">
                 <div class="footer-top">
                     <div class="footer-top-left">
-                        <img src="./images/logo.png" alt="logo" class="logo">
+                        <img src="./images/logo.svg" alt="logo" class="logo">
                         <p class="subtext">
                             Photographers & videographers capturing the world around us.
                         </p>
@@ -291,11 +292,10 @@
         }
     </script>
 
-    <script src="js/wow.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        new WOW().init();
+        AOS.init();
     </script>
-
 </body>
 
 </html>
